@@ -1,0 +1,11 @@
+<footer class="site-footer">
+  <p>
+    {% if site.author.github != "" %}
+    <a href="{{ site.author.github }}">GitHub</a>
+    {% endif %}
+    {% if site.author.linkedin != "" %}
+    {% if site.author.github != "" %}<span class="sep" aria-hidden="true">·</span>{% endif %}
+    <a href="{{ site.author.linkedin }}">LinkedIn</a>
+    {% endif %}
+  </p>
+</footer>
