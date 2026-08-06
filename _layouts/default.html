@@ -3,6 +3,18 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <script>
+      (function () {
+        try {
+          var stored = localStorage.getItem("theme");
+          if (stored === "light" || stored === "dark") {
+            document.documentElement.setAttribute("data-theme", stored);
+          }
+        } catch (e) {
+          /* localStorage unavailable */
+        }
+      })();
+    </script>
     <title>
       {%- if page.url == '/' -%}
         {{ site.title }}
@@ -32,5 +44,6 @@
       </main>
       {% include footer.html %}
     </div>
+    <script src="{{ '/assets/js/theme.js' | relative_url }}" defer></script>
   </body>
 </html>

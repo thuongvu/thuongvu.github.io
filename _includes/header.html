@@ -1,6 +1,16 @@
 <header class="site-header">
-  <nav class="nav" aria-label="Primary">
-    <a href="{{ '/' | relative_url }}"{% if page.url == '/' %} aria-current="page"{% endif %}>Home</a>
-    <a href="{{ '/about/' | relative_url }}"{% if page.url == '/about/' %} aria-current="page"{% endif %}>About</a>
-  </nav>
+  <a class="brand" href="{{ '/' | relative_url }}">{{ site.title }}</a>
+  <div class="header-end">
+    <nav class="nav" aria-label="Primary">
+      <a href="{{ '/about/' | relative_url }}"{% if page.url == '/about/' %} aria-current="page"{% endif %}>About</a>
+    </nav>
+    <button
+      type="button"
+      class="theme-toggle"
+      data-theme-toggle
+      aria-label="Switch to dark mode"
+    >
+      <span class="theme-toggle-icon" aria-hidden="true">◐</span>
+    </button>
+  </div>
 </header>
