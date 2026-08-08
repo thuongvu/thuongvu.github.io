@@ -6,11 +6,29 @@ Personal site for [thuongvuho.com](https://thuongvuho.com), built with Jekyll on
 
 - `index.md` — home
 - `about.md` — about
-- `_posts/` — add Writing later as `YYYY-MM-DD-slug.md`
+- `writing.md` — writing index
+- `_posts/YYYY-MM-DD-slug.md` — posts
+- `assets/posts/<slug>/` — images and SVGs for a post
 - `assets/css/main.css` — styles
-- `assets/images/` — images for posts
 
-When you add your first post, restore a Writing link in `_includes/header.html` and a post list on `index.md` (or add `writing.md` again).
+### Adding a post with assets
+
+1. Create `_posts/2026-08-08-my-post.md`
+2. Put figures in `assets/posts/my-post/` (e.g. `diagram.svg`)
+3. Reference them in the post:
+
+```md
+<figure class="wide">
+  <img src="{{ '/assets/posts/my-post/diagram.svg' | relative_url }}" alt="Description of the diagram">
+  <figcaption>Optional caption.</figcaption>
+</figure>
+```
+
+Or a simple image:
+
+```md
+![Description]({{ '/assets/posts/my-post/diagram.svg' | relative_url }})
+```
 
 ## Local preview (optional)
 

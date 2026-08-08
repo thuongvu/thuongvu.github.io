@@ -3,6 +3,7 @@
   <div class="header-end">
     <nav class="nav" aria-label="Primary">
       <a href="{{ '/about/' | relative_url }}"{% if page.url == '/about/' %} aria-current="page"{% endif %}>About</a>
+      <a href="{{ '/writing/' | relative_url }}"{% if page.url contains '/writing' %} aria-current="page"{% endif %}>Writing</a>
     </nav>
     <button
       type="button"

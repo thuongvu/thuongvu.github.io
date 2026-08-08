@@ -6,20 +6,20 @@ layout: default
     <p class="meta">
       <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %-d, %Y" }}</time>
     </p>
-    <h1>{{ page.title }}</h1>
-    {% if page.subtitle %}
+    <h1>{% if page.display_title %}{{ page.display_title }}{% else %}{{ page.title }}{% endif %}</h1>
+    {% if page.subtitle and page.subtitle != "" %}
     <p class="lede">{{ page.subtitle }}</p>
     {% endif %}
 
-    {% if page.project_url or page.repo_url %}
+    {% if page.project_url != "" or page.repo_url != "" %}
     <p class="project-links">
-      {% if page.project_url %}
+      {% if page.project_url and page.project_url != "" %}
       <a href="{{ page.project_url }}">Live project</a>
       {% endif %}
-      {% if page.project_url and page.repo_url %}
+      {% if page.project_url != "" and page.repo_url != "" %}
       <span class="sep" aria-hidden="true">·</span>
       {% endif %}
-      {% if page.repo_url %}
+      {% if page.repo_url and page.repo_url != "" %}
       <a href="{{ page.repo_url }}">Repository</a>
       {% endif %}
     </p>
@@ -29,6 +29,6 @@ layout: default
   {{ content }}
 
   <p class="back">
-    <a href="{{ '/' | relative_url }}">← Home</a>
+    <a href="{{ '/writing/' | relative_url }}">← Writing</a>
   </p>
 </article>
