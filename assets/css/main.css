@@ -28,9 +28,10 @@ html[data-theme="light"] {
   --code-fn: #4b6544;
   --code-border: #cbd2c4;
   --selection: rgba(53, 92, 47, 0.22);
-  --pre-bg: var(--code-bg);
-  --pre-ink: var(--ink);
-  --pre-line: var(--code-border);
+  /* Explicit light journal code surface (not dark terminal) */
+  --pre-bg: #eceee7;
+  --pre-ink: #1f241d;
+  --pre-line: #cbd2c4;
 }
 
 html[data-theme="dark"] {
@@ -492,19 +493,17 @@ h3 {
   margin-top: 2rem;
 }
 
-.prose code,
-.prose pre {
-  font-family: var(--font-mono);
-}
-
 .prose code {
+  font-family: var(--font-mono);
   font-size: 0.92em;
   padding: 0.1em 0.35em;
   background: var(--code-bg);
   border-radius: 2px;
 }
 
-.prose pre {
+.prose pre,
+.prose pre.highlight,
+.prose .highlight pre {
   overflow-x: auto;
   padding: 1rem 1.1rem;
   background: var(--pre-bg);
@@ -515,6 +514,11 @@ h3 {
   font-size: 0.82rem;
   line-height: 1.5;
   tab-size: 2;
+}
+
+.prose .highlighter-rouge,
+.prose .highlight {
+  background: transparent;
 }
 
 .prose pre code {
