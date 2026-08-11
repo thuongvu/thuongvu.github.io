@@ -4,7 +4,7 @@ title: About
 permalink: /about/
 ---
 
-I’m Thuongvu, a senior software engineer interested in distributed systems, machine learning infrastructure, and GPU performance. My work has spanned product engineering, distributed systems, and cloud infrastructure.
+I'm Thuongvu, a senior software engineer interested in distributed systems and machine learning infrastructure. My work has spanned product engineering, distributed systems, and cloud infrastructure.
 
 At Chime, I work on the infrastructure behind AI-assisted customer support. That includes LLM pipelines, conversational platforms, and the authentication, data, and reliability systems that make them practical to run in production.
 
