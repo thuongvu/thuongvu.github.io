@@ -429,6 +429,52 @@ h3 {
   margin-top: 0.35rem;
 }
 
+.prose table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9rem;
+  line-height: 1.45;
+}
+
+.prose > table + * {
+  margin-top: 1.85em;
+}
+
+.prose th,
+.prose td {
+  padding: 0.5rem 0.9rem 0.5rem 0;
+  text-align: left;
+  vertical-align: top;
+}
+
+.prose th:last-child,
+.prose td:last-child {
+  padding-right: 0;
+}
+
+.prose th {
+  font-weight: 600;
+  color: var(--muted);
+  border-bottom: 1px solid var(--ink);
+}
+
+.prose td {
+  border-bottom: 1px solid var(--line);
+}
+
+.prose th[align="right"],
+.prose td[align="right"],
+.prose th[style*="text-align: right"],
+.prose td[style*="text-align: right"] {
+  text-align: right;
+  font-variant-numeric: tabular-nums;
+  white-space: nowrap;
+}
+
+.prose td:first-child {
+  font-weight: 550;
+}
+
 .prose img {
   display: block;
   max-width: 100%;
@@ -568,6 +614,48 @@ h3 {
   color: var(--muted);
 }
 
+.prose hr {
+  border: 0;
+  height: 1px;
+  margin: 1.75rem 0;
+  background: var(--line);
+}
+
+.prose .footnotes {
+  font-size: 0.92rem;
+  color: var(--muted);
+  margin-bottom: 0;
+}
+
+.prose .footnotes ol {
+  margin: 0;
+  padding-left: 1.25rem;
+}
+
+.prose .footnotes li {
+  margin: 0;
+  padding: 0;
+}
+
+.prose .footnotes li + li {
+  margin-top: 0.7rem;
+}
+
+.prose .footnotes p {
+  display: inline;
+  margin: 0;
+}
+
+.prose .reversefootnote {
+  margin-left: 0.15em;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.prose > .footnotes + .back {
+  margin-top: 0;
+}
+
 .todo {
   margin: 1.25rem 0;
   padding: 0.85rem 1rem;
@@ -583,7 +671,7 @@ h3 {
 }
 
 .back {
-  margin-top: 2.5rem;
+  margin-top: 1.5rem;
   padding-top: 1.25rem;
   border-top: 1px solid var(--line);
 }
